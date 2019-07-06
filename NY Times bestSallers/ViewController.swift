@@ -15,31 +15,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let headers:HTTPHeaders = [
-            "api-key": URLConstants.API_KEY
-        ]
         
-      
+        
+        guard let gitUrl = URL(string: URLConstants.BESTSELLER_LIST_OVERVIEW) else { return }
+        URLSession.shared.dataTask(with: gitUrl) { (data, response
+            , error) in
+            guard let data = data else { return }
+            do {
+                let decoder = JSONDecoder()
+                let overview = try decoder.decode(NYTimesBestsellerOverview.self, from: data)
+                print(overview.results.lists)
 
-        Alamofire.request(URLConstants.BESTSELLER_LIST_OVERVIEW, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON { (respose) in
-            
-            switch respose.result {
-            case .success:
-                if let validData = respose.data {
-                    do {
-                        let decoder = JSONDecoder()
-                        self.overview = try decoder.decode(NYTimesBestsellerOverview.self, from: validData)
-                        print(self.overview!.copyright)
-                        
-                    } catch {
-                        print("error")
-                    }
-                }
-            case .failure(let error):
-                print("error")
+            } catch let err {
+                print("Err", err)
             }
-        }
+            }.resume()
 
-}
+        
 
+    }
 }

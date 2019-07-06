@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2681499622D0DE4E004A6CF6 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499522D0DE4E004A6CF6 /* Books.swift */; };
+		2681499622D0DE4E004A6CF6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499522D0DE4E004A6CF6 /* List.swift */; };
 		269151F022CE7055002DFE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269151EF22CE7055002DFE26 /* AppDelegate.swift */; };
 		269151F222CE7055002DFE26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269151F122CE7055002DFE26 /* ViewController.swift */; };
 		269151F522CE7055002DFE26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269151F322CE7055002DFE26 /* Main.storyboard */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2681499522D0DE4E004A6CF6 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
+		2681499522D0DE4E004A6CF6 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		269151EC22CE7055002DFE26 /* NY Times bestSallers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NY Times bestSallers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		269151EF22CE7055002DFE26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		269151F122CE7055002DFE26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				2691520322CE76C7002DFE26 /* NYTimesBestsellerOverview.swift */,
-				2681499522D0DE4E004A6CF6 /* Books.swift */,
+				2681499522D0DE4E004A6CF6 /* List.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2681499622D0DE4E004A6CF6 /* Books.swift in Sources */,
+				2681499622D0DE4E004A6CF6 /* List.swift in Sources */,
 				269151F222CE7055002DFE26 /* ViewController.swift in Sources */,
 				2691520722CE7CB5002DFE26 /* URLConstants.swift in Sources */,
 				2691520422CE76C7002DFE26 /* NYTimesBestsellerOverview.swift in Sources */,

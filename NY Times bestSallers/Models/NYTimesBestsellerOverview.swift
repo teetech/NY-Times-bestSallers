@@ -9,13 +9,29 @@
 import Foundation
 
 struct NYTimesBestsellerOverview: Codable {
-    var copyright: String
-    var num_results: Int
-    var status: String
+    let copyright: String
+    let num_results: Int
+    let status: String
+    let results: Results
+    
+    enum CodingKeys: CodingKey {
+        case copyright
+        case num_results
+        case status
+        case results
+    }
 }
 
-enum CodingKeys: CodingKey {
-    case copyright
-    case num_results
-    case status
+struct Results: Codable {
+    let published_date: String?
+    let published_date_description: String
+    let lists: [List]
+    
+    enum CodingKeys: CodingKey {
+        case published_date
+        case published_date_description
+        case lists
+    }
 }
+
+
