@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  NY Times bestSallers
 //
 //  Created by Anthony Awuzie on 7/4/19.
@@ -9,8 +9,9 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
-
+class HomeViewController: UIViewController {
+    @IBOutlet weak var bookListTableView: UITableView!
+    
     private var overview: NYTimesBestsellerOverview?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,3 +36,15 @@ class ViewController: UIViewController {
 
     }
 }
+
+//extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 0
+//    }
+
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        return 
+//    }
+    
+    
+//}
