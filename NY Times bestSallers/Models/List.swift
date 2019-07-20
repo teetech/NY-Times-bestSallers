@@ -10,10 +10,12 @@ import Foundation
 
 struct List: Codable {
     let display_name: String
+    let list_id: Int
     let books: [Book]
     
     
     enum CodingKeys: CodingKey {
+        case list_id
         case display_name
         case books
     }
@@ -22,7 +24,7 @@ struct List: Codable {
 struct Book: Codable {
     let title: String
     let author: String
-    let book_image: String
+    var book_image: String?
     let rank: Int
     let primary_isbn10: String
     let publisher: String
