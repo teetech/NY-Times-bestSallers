@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableViewForBooks: UITableView!
     private var bestSellerBooks: NYTimesBestsellerOverview?
+    private var allBooks: [Book] = []
 
     
     
@@ -42,7 +43,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             do {
                 let decoder = JSONDecoder()
                 let downloadedBooks = try decoder.decode(NYTimesBestsellerOverview.self, from: data)
-                self.bestSellerBooks = downloadedBooks
+                for(index, list) in downloadedBooks.results.lists.enumerated() {
+                    self.allBooks.append(contentsOf: list.books)
+                }
                 DispatchQueue.main.async {
                     self.tableViewForBooks.reloadData()
                 }
@@ -56,8 +59,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-//            (bestSellerBooks?.results.lists.count)!
+        return allBooks.count
     }
     
     fileprivate func modifyTableCell(_ cell: HomeTableViewCell) {
@@ -75,10 +77,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HomeTableViewCell
         
         modifyTableCell(cell)
-        cell.author.text = bestSellerBooks?.results.lists[indexPath.section + 3].books[indexPath.row].author
-        cell.bookTitle.text = bestSellerBooks?.results.lists[indexPath.section + 3].books[indexPath.row].title
-        cell.bookImage.loadImage(using: (bestSellerBooks?.results.lists[indexPath.section + 3].books[indexPath.row].book_image ?? "test_img"))
-    
+        cell.author.text = allBooks[indexPath.row].author
+        cell.bookTitle.text = allBooks[indexPath.row].title
+        cell.bookImage.loadImage(using: (allBooks[indexPath.row].book_image ?? "test_img"))
         return cell
     }
     
@@ -99,7 +100,6 @@ extension UIImageView {
             }
             DispatchQueue.main.async {
                 self.image = UIImage(data: data!)
-
             }
         }).resume()
         

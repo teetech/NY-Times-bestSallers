@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2681499622D0DE4E004A6CF6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499522D0DE4E004A6CF6 /* List.swift */; };
-		2681499B22D13A58004A6CF6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499A22D13A58004A6CF6 /* HomeViewModel.swift */; };
 		2681499E22D1421D004A6CF6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */; };
 		268149A022DA912A004A6CF6 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2681499F22DA912A004A6CF6 /* TableCell.xib */; };
 		269151F022CE7055002DFE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269151EF22CE7055002DFE26 /* AppDelegate.swift */; };
@@ -23,7 +22,6 @@
 
 /* Begin PBXFileReference section */
 		2681499522D0DE4E004A6CF6 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
-		2681499A22D13A58004A6CF6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		2681499F22DA912A004A6CF6 /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		269151EC22CE7055002DFE26 /* NY Times bestSallers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NY Times bestSallers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,14 +50,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2681499922D13A31004A6CF6 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				2681499A22D13A58004A6CF6 /* HomeViewModel.swift */,
-			);
-			path = "View Models";
-			sourceTree = "<group>";
-		};
 		2681499C22D141F9004A6CF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				2681499C22D141F9004A6CF6 /* Views */,
-				2681499922D13A31004A6CF6 /* View Models */,
 				2691520822CE8048002DFE26 /* Services */,
 				2691520522CE7C40002DFE26 /* Constants */,
 				2691520222CE761F002DFE26 /* Helpers */,
@@ -269,7 +258,6 @@
 			files = (
 				2681499622D0DE4E004A6CF6 /* List.swift in Sources */,
 				269151F222CE7055002DFE26 /* HomeViewController.swift in Sources */,
-				2681499B22D13A58004A6CF6 /* HomeViewModel.swift in Sources */,
 				2691520722CE7CB5002DFE26 /* URLConstants.swift in Sources */,
 				2691520422CE76C7002DFE26 /* NYTimesBestsellerOverview.swift in Sources */,
 				269151F022CE7055002DFE26 /* AppDelegate.swift in Sources */,
