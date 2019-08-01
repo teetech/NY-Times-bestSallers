@@ -39,11 +39,40 @@
                     <navigationItem key="navigationItem" title="NY Times Bestsellers" id="vNH-xW-vIl"/>
                     <connections>
                         <outlet property="tableViewForBooks" destination="if8-Xn-KIx" id="BTt-rY-Nf0"/>
+                        <segue destination="sT4-qJ-ELN" kind="show" identifier="sendBookDetail" id="arr-rr-Cj2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060.8695652173915" y="-535.04464285714278"/>
+        </scene>
+        <!--Book Detail View Controller-->
+        <scene sceneID="2GQ-AB-qMi">
+            <objects>
+                <viewController id="sT4-qJ-ELN" customClass="BookDetailViewController" customModule="NY_Times_bestSallers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9DL-Br-4GU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIm-7F-uBh">
+                                <rect key="frame" x="110" y="265" width="159" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ciL-cL-MEw"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="bookTitle" destination="JIm-7F-uBh" id="sJE-xL-5m0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlO-bV-U8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944.9275362318842" y="-535.04464285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ign-D8-BBb">
