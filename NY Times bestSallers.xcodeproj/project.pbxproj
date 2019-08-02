@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2681499622D0DE4E004A6CF6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499522D0DE4E004A6CF6 /* List.swift */; };
-		2681499B22D13A58004A6CF6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499A22D13A58004A6CF6 /* HomeViewModel.swift */; };
 		2681499E22D1421D004A6CF6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */; };
 		268149A022DA912A004A6CF6 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2681499F22DA912A004A6CF6 /* TableCell.xib */; };
+		268149A322F26881004A6CF6 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268149A222F26881004A6CF6 /* BookDetailViewController.swift */; };
 		269151F022CE7055002DFE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269151EF22CE7055002DFE26 /* AppDelegate.swift */; };
 		269151F222CE7055002DFE26 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269151F122CE7055002DFE26 /* HomeViewController.swift */; };
 		269151F522CE7055002DFE26 /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269151F322CE7055002DFE26 /* HomeScreen.storyboard */; };
@@ -23,9 +23,9 @@
 
 /* Begin PBXFileReference section */
 		2681499522D0DE4E004A6CF6 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
-		2681499A22D13A58004A6CF6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		2681499F22DA912A004A6CF6 /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
+		268149A222F26881004A6CF6 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		269151EC22CE7055002DFE26 /* NY Times bestSallers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NY Times bestSallers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		269151EF22CE7055002DFE26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		269151F122CE7055002DFE26 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -52,21 +52,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2681499922D13A31004A6CF6 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-				2681499A22D13A58004A6CF6 /* HomeViewModel.swift */,
-			);
-			path = "View Models";
-			sourceTree = "<group>";
-		};
 		2681499C22D141F9004A6CF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				269151F122CE7055002DFE26 /* HomeViewController.swift */,
 				2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		268149A122F26833004A6CF6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				269151F122CE7055002DFE26 /* HomeViewController.swift */,
+				268149A222F26881004A6CF6 /* BookDetailViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		269151E322CE7055002DFE26 = {
@@ -90,8 +90,8 @@
 		269151EE22CE7055002DFE26 /* NY Times bestSallers */ = {
 			isa = PBXGroup;
 			children = (
+				268149A122F26833004A6CF6 /* View Controllers */,
 				2681499C22D141F9004A6CF6 /* Views */,
-				2681499922D13A31004A6CF6 /* View Models */,
 				2691520822CE8048002DFE26 /* Services */,
 				2691520522CE7C40002DFE26 /* Constants */,
 				2691520222CE761F002DFE26 /* Helpers */,
@@ -269,9 +269,9 @@
 			files = (
 				2681499622D0DE4E004A6CF6 /* List.swift in Sources */,
 				269151F222CE7055002DFE26 /* HomeViewController.swift in Sources */,
-				2681499B22D13A58004A6CF6 /* HomeViewModel.swift in Sources */,
 				2691520722CE7CB5002DFE26 /* URLConstants.swift in Sources */,
 				2691520422CE76C7002DFE26 /* NYTimesBestsellerOverview.swift in Sources */,
+				268149A322F26881004A6CF6 /* BookDetailViewController.swift in Sources */,
 				269151F022CE7055002DFE26 /* AppDelegate.swift in Sources */,
 				2681499E22D1421D004A6CF6 /* HomeTableViewCell.swift in Sources */,
 			);

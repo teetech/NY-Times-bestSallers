@@ -9,10 +9,13 @@
 import UIKit
 import Alamofire
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableViewForBooks: UITableView!
     private var bestSellerBooks: NYTimesBestsellerOverview?
+    private var allBooks: [Book] = []
+    
+    let bookDetaildentifier = "sendBookDetail"
 
     
     
@@ -25,13 +28,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableViewForBooks.register(UINib(nibName: "TableCell", bundle: nil), forCellReuseIdentifier: "cell")
         
-        
-        
         guard let url = URL(string: URLConstants.BESTSELLER_LIST_OVERVIEW) else { return }
         DispatchQueue.global(qos: .background).async {
             self.getData(url)
         }
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isTranslucent = false
     }
     
     fileprivate func getData(_ url: URL) {
@@ -42,7 +48,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             do {
                 let decoder = JSONDecoder()
                 let downloadedBooks = try decoder.decode(NYTimesBestsellerOverview.self, from: data)
-                self.bestSellerBooks = downloadedBooks
+                for(_, list) in downloadedBooks.results.lists.enumerated() {
+                    self.allBooks.append(contentsOf: list.books)
+                }
                 DispatchQueue.main.async {
                     self.tableViewForBooks.reloadData()
                 }
@@ -55,9 +63,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-//            (bestSellerBooks?.results.lists.count)!
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == bookDetaildentifier {
+            let bookDetail = segue.destination as! BookDetailViewController
+            bookDetail.book = sender as? Book
+        }
     }
     
     fileprivate func modifyTableCell(_ cell: HomeTableViewCell) {
@@ -70,23 +80,38 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.layer.shadowPath = shadowPath2.cgPath
         cell.layer.borderWidth = CGFloat(1)
     }
+}
+
+
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return allBooks.count
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! HomeTableViewCell
         
         modifyTableCell(cell)
-        cell.author.text = bestSellerBooks?.results.lists[indexPath.section + 3].books[indexPath.row].author
-        cell.bookTitle.text = bestSellerBooks?.results.lists[indexPath.section + 3].books[indexPath.row].title
-        cell.bookImage.loadImage(using: (bestSellerBooks?.results.lists[indexPath.section + 3].books[indexPath.row].book_image ?? "test_img"))
-    
+        cell.author.text = allBooks[indexPath.row].author
+        cell.bookTitle.text = allBooks[indexPath.row].title
+        cell.bookImage.loadImage(using: (allBooks[indexPath.row].book_image ?? "test_img"))
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 165
     }
-   
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedBook = allBooks[indexPath.row]
+        performSegue(withIdentifier: bookDetaildentifier, sender: selectedBook)
+        
+    }
+    
+    
 }
+
 
 extension UIImageView {
     func loadImage(using urlString: String) {
@@ -99,7 +124,6 @@ extension UIImageView {
             }
             DispatchQueue.main.async {
                 self.image = UIImage(data: data!)
-
             }
         }).resume()
         

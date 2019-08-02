@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="if8-Xn-KIx">
-                                <rect key="frame" x="6" y="88" width="402" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <sections/>
@@ -29,19 +29,50 @@
                         <constraints>
                             <constraint firstItem="if8-Xn-KIx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EaJ-nI-XGW"/>
                             <constraint firstAttribute="bottom" secondItem="if8-Xn-KIx" secondAttribute="bottom" id="PxP-0k-mwf"/>
-                            <constraint firstItem="if8-Xn-KIx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="Qlv-kM-6J6"/>
-                            <constraint firstItem="if8-Xn-KIx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-6" id="wR6-xu-lFe"/>
+                            <constraint firstItem="if8-Xn-KIx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qlv-kM-6J6"/>
+                            <constraint firstItem="if8-Xn-KIx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="chz-Ba-ZJx"/>
+                            <constraint firstItem="if8-Xn-KIx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q28-JY-beN"/>
+                            <constraint firstItem="if8-Xn-KIx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wR6-xu-lFe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="NY Times Bestsellers" id="vNH-xW-vIl"/>
                     <connections>
                         <outlet property="tableViewForBooks" destination="if8-Xn-KIx" id="BTt-rY-Nf0"/>
+                        <segue destination="sT4-qJ-ELN" kind="show" identifier="sendBookDetail" id="arr-rr-Cj2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060.8695652173915" y="-535.04464285714278"/>
+        </scene>
+        <!--Book Detail View Controller-->
+        <scene sceneID="2GQ-AB-qMi">
+            <objects>
+                <viewController id="sT4-qJ-ELN" customClass="BookDetailViewController" customModule="NY_Times_bestSallers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9DL-Br-4GU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIm-7F-uBh">
+                                <rect key="frame" x="110" y="265" width="159" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ciL-cL-MEw"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="bookTitle" destination="JIm-7F-uBh" id="sJE-xL-5m0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlO-bV-U8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1944.9275362318842" y="-535.04464285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ign-D8-BBb">
