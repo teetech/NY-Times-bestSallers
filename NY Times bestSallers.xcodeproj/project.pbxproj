@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265159D822F3CC9E00446654 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 265159D722F3CC9E00446654 /* GoogleService-Info.plist */; };
 		2681499622D0DE4E004A6CF6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499522D0DE4E004A6CF6 /* List.swift */; };
 		2681499E22D1421D004A6CF6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */; };
 		268149A022DA912A004A6CF6 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2681499F22DA912A004A6CF6 /* TableCell.xib */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		265159D722F3CC9E00446654 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2681499522D0DE4E004A6CF6 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		2681499F22DA912A004A6CF6 /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				269151F622CE7058002DFE26 /* Assets.xcassets */,
 				269151F822CE7058002DFE26 /* LaunchScreen.storyboard */,
 				269151FB22CE7058002DFE26 /* Info.plist */,
+				265159D722F3CC9E00446654 /* GoogleService-Info.plist */,
 			);
 			path = "NY Times bestSallers";
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			files = (
 				269151FA22CE7058002DFE26 /* LaunchScreen.storyboard in Resources */,
 				269151F722CE7058002DFE26 /* Assets.xcassets in Resources */,
+				265159D822F3CC9E00446654 /* GoogleService-Info.plist in Resources */,
 				268149A022DA912A004A6CF6 /* TableCell.xib in Resources */,
 				269151F522CE7055002DFE26 /* HomeScreen.storyboard in Resources */,
 			);
@@ -249,11 +253,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NY Times bestSallers/Pods-NY Times bestSallers-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
