@@ -18,7 +18,7 @@
 		269151F722CE7058002DFE26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269151F622CE7058002DFE26 /* Assets.xcassets */; };
 		269151FA22CE7058002DFE26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269151F822CE7058002DFE26 /* LaunchScreen.storyboard */; };
 		2691520422CE76C7002DFE26 /* NYTimesBestsellerOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2691520322CE76C7002DFE26 /* NYTimesBestsellerOverview.swift */; };
-		2691520722CE7CB5002DFE26 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2691520622CE7CB5002DFE26 /* URLConstants.swift */; };
+		26EBEE6322F645BC001613E7 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EBEE6222F645BC001613E7 /* URLConstants.swift */; };
 		30F3FEDAC526EEE6F65D9FC0 /* Pods_NY_Times_bestSallers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBC73F1089F61B0A33851D8 /* Pods_NY_Times_bestSallers.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,7 @@
 		269151F922CE7058002DFE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		269151FB22CE7058002DFE26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2691520322CE76C7002DFE26 /* NYTimesBestsellerOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesBestsellerOverview.swift; sourceTree = "<group>"; };
-		2691520622CE7CB5002DFE26 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLConstants.swift; path = "NY Times bestSallers/URLConstants.swift"; sourceTree = SOURCE_ROOT; };
+		26EBEE6222F645BC001613E7 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		58828EC09CFA188931331FD9 /* Pods-NY Times bestSallers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NY Times bestSallers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NY Times bestSallers/Pods-NY Times bestSallers.debug.xcconfig"; sourceTree = "<group>"; };
 		D241FE4352CC86F98808191E /* Pods-NY Times bestSallers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NY Times bestSallers.release.xcconfig"; path = "Pods/Target Support Files/Pods-NY Times bestSallers/Pods-NY Times bestSallers.release.xcconfig"; sourceTree = "<group>"; };
 		DEBC73F1089F61B0A33851D8 /* Pods_NY_Times_bestSallers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NY_Times_bestSallers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,6 @@
 				268149A122F26833004A6CF6 /* View Controllers */,
 				2681499C22D141F9004A6CF6 /* Views */,
 				2691520822CE8048002DFE26 /* Services */,
-				2691520522CE7C40002DFE26 /* Constants */,
 				2691520222CE761F002DFE26 /* Helpers */,
 				2691520122CE760F002DFE26 /* Models */,
 				269151EF22CE7055002DFE26 /* AppDelegate.swift */,
@@ -105,6 +104,7 @@
 				269151F822CE7058002DFE26 /* LaunchScreen.storyboard */,
 				269151FB22CE7058002DFE26 /* Info.plist */,
 				265159D722F3CC9E00446654 /* GoogleService-Info.plist */,
+				26EBEE6222F645BC001613E7 /* URLConstants.swift */,
 			);
 			path = "NY Times bestSallers";
 			sourceTree = "<group>";
@@ -123,14 +123,6 @@
 			children = (
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		2691520522CE7C40002DFE26 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				2691520622CE7CB5002DFE26 /* URLConstants.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		2691520822CE8048002DFE26 /* Services */ = {
@@ -274,14 +266,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-NY Times bestSallers/Pods-NY Times bestSallers-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,8 +288,8 @@
 			files = (
 				2681499622D0DE4E004A6CF6 /* List.swift in Sources */,
 				269151F222CE7055002DFE26 /* HomeViewController.swift in Sources */,
-				2691520722CE7CB5002DFE26 /* URLConstants.swift in Sources */,
 				2691520422CE76C7002DFE26 /* NYTimesBestsellerOverview.swift in Sources */,
+				26EBEE6322F645BC001613E7 /* URLConstants.swift in Sources */,
 				268149A322F26881004A6CF6 /* BookDetailViewController.swift in Sources */,
 				269151F022CE7055002DFE26 /* AppDelegate.swift in Sources */,
 				2681499E22D1421D004A6CF6 /* HomeTableViewCell.swift in Sources */,
