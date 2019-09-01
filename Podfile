@@ -6,8 +6,9 @@ target 'NY Times bestSallers' do
   use_frameworks!
 
   # Pods for NY Times bestSallers
-   pod 'FirebaseUI/Auth'
+   pod 'FirebaseUI'
    pod 'Firebase/Analytics'
+   pod 'Firebase/Database'
 	 
 
 end

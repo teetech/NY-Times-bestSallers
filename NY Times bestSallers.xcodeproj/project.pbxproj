@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264DD60A22F64D6A00AD2001 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DD60922F64D6A00AD2001 /* LoginViewController.swift */; };
+		264DD60D22F64E5400AD2001 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264DD60C22F64E5400AD2001 /* Login.storyboard */; };
+		264DD61022F651A300AD2001 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DD60F22F651A300AD2001 /* FirebaseConstants.swift */; };
 		265159D822F3CC9E00446654 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 265159D722F3CC9E00446654 /* GoogleService-Info.plist */; };
 		2681499622D0DE4E004A6CF6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499522D0DE4E004A6CF6 /* List.swift */; };
 		2681499E22D1421D004A6CF6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		264DD60922F64D6A00AD2001 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		264DD60C22F64E5400AD2001 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		264DD60F22F651A300AD2001 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		265159D722F3CC9E00446654 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2681499522D0DE4E004A6CF6 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -54,6 +60,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		264DD60B22F64D9500AD2001 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				269151F322CE7055002DFE26 /* HomeScreen.storyboard */,
+				2681499F22DA912A004A6CF6 /* TableCell.xib */,
+				264DD60C22F64E5400AD2001 /* Login.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		264DD60E22F6511100AD2001 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				264DD60F22F651A300AD2001 /* FirebaseConstants.swift */,
+				26EBEE6222F645BC001613E7 /* URLConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		2681499C22D141F9004A6CF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +92,7 @@
 			children = (
 				269151F122CE7055002DFE26 /* HomeViewController.swift */,
 				268149A222F26881004A6CF6 /* BookDetailViewController.swift */,
+				264DD60922F64D6A00AD2001 /* LoginViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -92,19 +118,18 @@
 		269151EE22CE7055002DFE26 /* NY Times bestSallers */ = {
 			isa = PBXGroup;
 			children = (
+				264DD60E22F6511100AD2001 /* Constants */,
+				264DD60B22F64D9500AD2001 /* Storyboards */,
 				268149A122F26833004A6CF6 /* View Controllers */,
 				2681499C22D141F9004A6CF6 /* Views */,
 				2691520822CE8048002DFE26 /* Services */,
 				2691520222CE761F002DFE26 /* Helpers */,
 				2691520122CE760F002DFE26 /* Models */,
 				269151EF22CE7055002DFE26 /* AppDelegate.swift */,
-				269151F322CE7055002DFE26 /* HomeScreen.storyboard */,
-				2681499F22DA912A004A6CF6 /* TableCell.xib */,
 				269151F622CE7058002DFE26 /* Assets.xcassets */,
 				269151F822CE7058002DFE26 /* LaunchScreen.storyboard */,
 				269151FB22CE7058002DFE26 /* Info.plist */,
 				265159D722F3CC9E00446654 /* GoogleService-Info.plist */,
-				26EBEE6222F645BC001613E7 /* URLConstants.swift */,
 			);
 			path = "NY Times bestSallers";
 			sourceTree = "<group>";
@@ -212,6 +237,7 @@
 			files = (
 				269151FA22CE7058002DFE26 /* LaunchScreen.storyboard in Resources */,
 				269151F722CE7058002DFE26 /* Assets.xcassets in Resources */,
+				264DD60D22F64E5400AD2001 /* Login.storyboard in Resources */,
 				265159D822F3CC9E00446654 /* GoogleService-Info.plist in Resources */,
 				268149A022DA912A004A6CF6 /* TableCell.xib in Resources */,
 				269151F522CE7055002DFE26 /* HomeScreen.storyboard in Resources */,
@@ -246,11 +272,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NY Times bestSallers/Pods-NY Times bestSallers-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseEmailAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseEmailAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -264,14 +302,32 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NY Times bestSallers/Pods-NY Times bestSallers-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +346,8 @@
 				269151F222CE7055002DFE26 /* HomeViewController.swift in Sources */,
 				2691520422CE76C7002DFE26 /* NYTimesBestsellerOverview.swift in Sources */,
 				26EBEE6322F645BC001613E7 /* URLConstants.swift in Sources */,
+				264DD60A22F64D6A00AD2001 /* LoginViewController.swift in Sources */,
+				264DD61022F651A300AD2001 /* FirebaseConstants.swift in Sources */,
 				268149A322F26881004A6CF6 /* BookDetailViewController.swift in Sources */,
 				269151F022CE7055002DFE26 /* AppDelegate.swift in Sources */,
 				2681499E22D1421D004A6CF6 /* HomeTableViewCell.swift in Sources */,
