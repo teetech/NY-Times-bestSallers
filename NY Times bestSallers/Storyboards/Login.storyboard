@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t8l-dZ-7YE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="HNT-Ix-GmZ">
+            <objects>
+                <viewController id="t8l-dZ-7YE" customClass="LoginViewController" customModule="NY_Times_bestSallers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OXN-ec-lkK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York TImes Bestsellers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uir-5j-nk4">
+                                <rect key="frame" x="74" y="104" width="266" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="nOp-lt-kiA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7T-Nw-g3b">
+                                <rect key="frame" x="112" y="417" width="191" height="62"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="jDq-9g-1k6"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginTapped:" destination="t8l-dZ-7YE" eventType="touchUpInside" id="2zq-Mu-9m3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c7T-Nw-g3b" firstAttribute="leading" secondItem="0bg-dM-rlh" secondAttribute="leading" constant="112" id="5n2-CS-4ix"/>
+                            <constraint firstItem="uir-5j-nk4" firstAttribute="top" secondItem="0bg-dM-rlh" secondAttribute="top" constant="60" id="FQs-Tj-PzA"/>
+                            <constraint firstItem="c7T-Nw-g3b" firstAttribute="top" secondItem="uir-5j-nk4" secondAttribute="bottom" constant="253" id="Kea-kR-d4I"/>
+                            <constraint firstItem="0bg-dM-rlh" firstAttribute="trailing" secondItem="c7T-Nw-g3b" secondAttribute="trailing" constant="111" id="Uxi-GS-0gn"/>
+                            <constraint firstItem="uir-5j-nk4" firstAttribute="leading" secondItem="0bg-dM-rlh" secondAttribute="leading" constant="74" id="WYf-tu-B3F"/>
+                            <constraint firstItem="0bg-dM-rlh" firstAttribute="trailing" secondItem="uir-5j-nk4" secondAttribute="trailing" constant="74" id="vtJ-lO-S8Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0bg-dM-rlh"/>
+                    </view>
+                    <connections>
+                        <segue destination="Uaa-R8-A1v" kind="show" identifier="goHome" id="Yfo-Vk-Bds"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="umj-PT-a05" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695.6521739130435" y="-228.34821428571428"/>
+        </scene>
+        <!--HomeScreen-->
+        <scene sceneID="vue-HI-UHo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeScreen" id="Uaa-R8-A1v" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vly-TV-Pua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1462" y="-586"/>
+        </scene>
+    </scenes>
+</document>
