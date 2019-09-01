@@ -7,8 +7,8 @@ target 'NY Times bestSallers' do
 
   # Pods for NY Times bestSallers
    pod 'FirebaseUI'
-   pod 'Firebase/Analytics'
-   pod 'Firebase/Database'
+#   pod 'Firebase/Analytics'
+#   pod 'Firebase/Database'
 	 
 
 end
