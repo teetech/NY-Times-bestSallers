@@ -9,12 +9,30 @@
 import UIKit
 
 class BookDetailViewController: UIViewController {
-
-    var book: Book?
+    
+    var selectedBook: Book?
     @IBOutlet weak var bookTitle: UILabel!
+    @IBOutlet weak var author: UILabel!
+    @IBOutlet weak var rank: UILabel!
+    @IBOutlet weak var publisher: UILabel!
+    @IBOutlet weak var weekInList: UILabel!
+    @IBOutlet weak var createdDate: UILabel!
+    @IBOutlet weak var bookImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        bookTitle.text = book?.title
-        
+
+        config(book: selectedBook!)
+    }
+    
+    fileprivate func config(book: Book) {
+        bookTitle.text = book.title
+        author.text = "by " + book.author
+        rank.text = String(book.rank)
+        publisher.text = book.publisher
+        weekInList.text = String(book.weeks_on_list)
+        createdDate.text = book.created_date
+        bookImage.loadImage(using: (book.book_image ?? "test_img"))
     }
 }
