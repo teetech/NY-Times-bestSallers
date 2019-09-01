@@ -65,7 +65,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == bookDetaildentifier {
             let bookDetail = segue.destination as! BookDetailViewController
-            bookDetail.book = sender as? Book
+            bookDetail.selectedBook = sender as? Book
         }
     }
     
