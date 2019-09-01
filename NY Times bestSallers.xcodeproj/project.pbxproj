@@ -11,6 +11,7 @@
 		264DD60D22F64E5400AD2001 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264DD60C22F64E5400AD2001 /* Login.storyboard */; };
 		264DD61022F651A300AD2001 /* FirebaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DD60F22F651A300AD2001 /* FirebaseConstants.swift */; };
 		265159D822F3CC9E00446654 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 265159D722F3CC9E00446654 /* GoogleService-Info.plist */; };
+		2652483C231B596F00CD0844 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2652483B231B596F00CD0844 /* URLConstants.swift */; };
 		2681499622D0DE4E004A6CF6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499522D0DE4E004A6CF6 /* List.swift */; };
 		2681499E22D1421D004A6CF6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */; };
 		268149A022DA912A004A6CF6 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2681499F22DA912A004A6CF6 /* TableCell.xib */; };
@@ -30,6 +31,7 @@
 		264DD60C22F64E5400AD2001 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		264DD60F22F651A300AD2001 /* FirebaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConstants.swift; sourceTree = "<group>"; };
 		265159D722F3CC9E00446654 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2652483B231B596F00CD0844 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLConstants.swift; path = ../../../../URLConstants.swift; sourceTree = "<group>"; };
 		2681499522D0DE4E004A6CF6 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		2681499F22DA912A004A6CF6 /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				264DD60F22F651A300AD2001 /* FirebaseConstants.swift */,
 				26EBEE6222F645BC001613E7 /* URLConstants.swift */,
+				2652483B231B596F00CD0844 /* URLConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2681499622D0DE4E004A6CF6 /* List.swift in Sources */,
+				2652483C231B596F00CD0844 /* URLConstants.swift in Sources */,
 				269151F222CE7055002DFE26 /* HomeViewController.swift in Sources */,
 				2691520422CE76C7002DFE26 /* NYTimesBestsellerOverview.swift in Sources */,
 				26EBEE6322F645BC001613E7 /* URLConstants.swift in Sources */,
