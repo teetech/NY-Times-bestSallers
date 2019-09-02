@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		264DD60A22F64D6A00AD2001 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DD60922F64D6A00AD2001 /* LoginViewController.swift */; };
 		264DD60D22F64E5400AD2001 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264DD60C22F64E5400AD2001 /* Login.storyboard */; };
-		265159D822F3CC9E00446654 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 265159D722F3CC9E00446654 /* GoogleService-Info.plist */; };
 		26574754231B5CDF00BC89CF /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26574753231B5CDF00BC89CF /* URLConstants.swift */; };
 		2681499622D0DE4E004A6CF6 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499522D0DE4E004A6CF6 /* List.swift */; };
 		2681499E22D1421D004A6CF6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */; };
@@ -21,13 +20,13 @@
 		269151F722CE7058002DFE26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269151F622CE7058002DFE26 /* Assets.xcassets */; };
 		269151FA22CE7058002DFE26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269151F822CE7058002DFE26 /* LaunchScreen.storyboard */; };
 		2691520422CE76C7002DFE26 /* NYTimesBestsellerOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2691520322CE76C7002DFE26 /* NYTimesBestsellerOverview.swift */; };
+		26C0562E231CB6C000FAE1A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26C0562D231CB6C000FAE1A6 /* GoogleService-Info.plist */; };
 		30F3FEDAC526EEE6F65D9FC0 /* Pods_NY_Times_bestSallers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBC73F1089F61B0A33851D8 /* Pods_NY_Times_bestSallers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		264DD60922F64D6A00AD2001 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		264DD60C22F64E5400AD2001 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		265159D722F3CC9E00446654 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26574753231B5CDF00BC89CF /* URLConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		2681499522D0DE4E004A6CF6 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		2681499D22D1421D004A6CF6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		269151F922CE7058002DFE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		269151FB22CE7058002DFE26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2691520322CE76C7002DFE26 /* NYTimesBestsellerOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTimesBestsellerOverview.swift; sourceTree = "<group>"; };
+		26C0562D231CB6C000FAE1A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58828EC09CFA188931331FD9 /* Pods-NY Times bestSallers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NY Times bestSallers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NY Times bestSallers/Pods-NY Times bestSallers.debug.xcconfig"; sourceTree = "<group>"; };
 		D241FE4352CC86F98808191E /* Pods-NY Times bestSallers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NY Times bestSallers.release.xcconfig"; path = "Pods/Target Support Files/Pods-NY Times bestSallers/Pods-NY Times bestSallers.release.xcconfig"; sourceTree = "<group>"; };
 		DEBC73F1089F61B0A33851D8 /* Pods_NY_Times_bestSallers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NY_Times_bestSallers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,14 +119,13 @@
 				264DD60B22F64D9500AD2001 /* Storyboards */,
 				268149A122F26833004A6CF6 /* View Controllers */,
 				2681499C22D141F9004A6CF6 /* Views */,
-				2691520822CE8048002DFE26 /* Services */,
 				2691520222CE761F002DFE26 /* Helpers */,
 				2691520122CE760F002DFE26 /* Models */,
 				269151EF22CE7055002DFE26 /* AppDelegate.swift */,
 				269151F622CE7058002DFE26 /* Assets.xcassets */,
 				269151F822CE7058002DFE26 /* LaunchScreen.storyboard */,
 				269151FB22CE7058002DFE26 /* Info.plist */,
-				265159D722F3CC9E00446654 /* GoogleService-Info.plist */,
+				26C0562D231CB6C000FAE1A6 /* GoogleService-Info.plist */,
 			);
 			path = "NY Times bestSallers";
 			sourceTree = "<group>";
@@ -146,13 +145,6 @@
 				26574755231B628100BC89CF /* Constants */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		2691520822CE8048002DFE26 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		B0D71203F59C57F16996B8A3 /* Frameworks */ = {
@@ -236,9 +228,9 @@
 				269151FA22CE7058002DFE26 /* LaunchScreen.storyboard in Resources */,
 				269151F722CE7058002DFE26 /* Assets.xcassets in Resources */,
 				264DD60D22F64E5400AD2001 /* Login.storyboard in Resources */,
-				265159D822F3CC9E00446654 /* GoogleService-Info.plist in Resources */,
 				268149A022DA912A004A6CF6 /* TableCell.xib in Resources */,
 				269151F522CE7055002DFE26 /* HomeScreen.storyboard in Resources */,
+				26C0562E231CB6C000FAE1A6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,8 +31,8 @@ class LoginViewController: UIViewController {
         authUi?.delegate = self
         
         let providers: [FUIAuthProvider] = [
-            FUIEmailAuth(),
-            FUIPhoneAuth(authUI: FUIAuth.defaultAuthUI()!)
+            FUIEmailAuth()
+//            FUIPhoneAuth(authUI: FUIAuth.defaultAuthUI()!)
         ]
         authUi?.providers = providers
         let authViewController = authUi!.authViewController()
@@ -46,9 +46,9 @@ extension LoginViewController: FUIAuthDelegate {
         guard error == nil else {
             return
         }
-        if let uid = authDataResult?.user.uid {
-            FireBaseManager.shared.setUserUSerUID(UID: uid)
-        }
+//        if let uid = authDataResult?.user.uid {
+//            FireBaseManager.shared.setUserUSerUID(UID: uid)
+//        }
        
         performSegue(withIdentifier: "goHome", sender: self)
     }
